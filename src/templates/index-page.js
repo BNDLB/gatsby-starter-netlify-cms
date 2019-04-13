@@ -112,7 +112,7 @@ export const IndexPageTemplate = ({
         </div>
       </div>
     </section>
-    <i>{meta}</i>
+    <i className="u-meta">{meta}</i>
   </div>
 )
 
@@ -126,6 +126,7 @@ IndexPageTemplate.propTypes = {
   intro: PropTypes.shape({
     blurbs: PropTypes.array,
   }),
+  meta: PropTypes.string
 }
 
 const IndexPage = ({ data }) => {
@@ -141,6 +142,7 @@ const IndexPage = ({ data }) => {
         mainpitch={frontmatter.mainpitch}
         description={frontmatter.description}
         intro={frontmatter.intro}
+        meta={frontmatter.meta}
       />
     </Layout>
   )
